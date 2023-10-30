@@ -32,6 +32,12 @@ public class MaquinaExpendedoraSimple {
         estacionDestino = destino;
     }
     
+    //Devuelve el total de dinero acumulado desde el ultimo vaciado
+    
+    public int getTotalDineroAcumulado() {
+        return totalDineroAcumulado;
+    }
+    
     /**
      * Devuelve el precio del billete
      */
@@ -51,6 +57,7 @@ public class MaquinaExpendedoraSimple {
      */
     public void introducirDinero(int cantidadIntroducida) {
         balanceClienteActual = balanceClienteActual + cantidadIntroducida;
+        totalDineroAcumulado = totalDineroAcumulado + cantidadIntroducida;
     }
 
     /**
